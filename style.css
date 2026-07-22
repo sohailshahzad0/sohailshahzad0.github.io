@@ -913,15 +913,15 @@ button, input, textarea {
    10. CONTACT SECTION & FORM
    -------------------------------------------------------------------------- */
 .contact-wrapper {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 3rem;
+  max-width: 720px;
+  margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 3rem;
+  padding: 3rem 2.5rem;
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-lg);
+  text-align: center;
 }
 
 .contact-info-title {
@@ -932,13 +932,14 @@ button, input, textarea {
 
 .contact-info-desc {
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-size: 1.05rem;
 }
 
 .contact-methods {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
@@ -947,6 +948,8 @@ button, input, textarea {
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-align: left;
+  min-width: 280px;
 }
 
 .method-icon {
@@ -960,6 +963,7 @@ button, input, textarea {
   justify-content: center;
   color: var(--accent-secondary);
   font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
 .method-label {
@@ -976,9 +980,18 @@ button, input, textarea {
   color: var(--text-primary);
 }
 
+.contact-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
 .social-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
