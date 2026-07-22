@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Replace placeholder values below or via inline HTML attributes.
    * ------------------------------------------------------------------------ */
   // REPLACE: Update your WhatsApp phone number (with country code, no + or spaces)
-  const WHATSAPP_PHONE_NUMBER = '923000000000'; // Example: 923001234567 for Pakistan
+  const WHATSAPP_PHONE_NUMBER = '923127406081'; // Pakistan: +92 312 7406081
   const DEFAULT_WA_MESSAGE = 'Hi, I saw your portfolio and want to discuss a project';
 
   /* ------------------------------------------------------------------------
