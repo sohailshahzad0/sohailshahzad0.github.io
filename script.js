@@ -123,13 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-   * 7. CONTACT FORM SUBMISSION (CLIENT-SIDE HANDLER)
+   * 7. CONTACT FORM SUBMISSION (WEB3FORMS REAL EMAIL INTEGRATION)
    * ------------------------------------------------------------------------ */
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
+  const WEB3FORMS_ACCESS_KEY = 'b04406d0-245f-45d6-b07d-ae6ac2e18e7e';
 
   if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const nameInput = document.getElementById('form-name');
@@ -141,19 +142,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate success response for static GitHub Pages site
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
 
-      setTimeout(() => {
-        showFormStatus('Thank you! Your message has been sent successfully.', 'success');
-        contactForm.reset();
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            name: nameInput.value.trim(),
+            email: emailInput.value.trim(),
+            message: messageInput.value.trim(),
+            subject: `New Portfolio Contact Message from ${nameInput.value.trim()}`
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showFormStatus('Thank you! Your message has been sent to Sohail successfully.', 'success');
+          contactForm.reset();
+        } else {
+          showFormStatus(result.message || 'Error sending message. Please try again.', 'error');
+        }
+      } catch (err) {
+        showFormStatus('Network error occurred. Please try again or email directly.', 'error');
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-      }, 1200);
+      }
     });
   }
 
@@ -161,11 +185,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!formStatus) return;
     formStatus.textContent = msg;
     formStatus.className = `form-status ${type}`;
+    formStatus.style.display = 'block';
     
     setTimeout(() => {
       formStatus.style.display = 'none';
       formStatus.className = 'form-status';
-    }, 5000);
+    }, 6000);
   }
 
 });
