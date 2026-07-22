@@ -149,31 +149,29 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
 
       try {
+        const formData = new FormData();
+        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+        formData.append('name', nameInput.value.trim());
+        formData.append('email', emailInput.value.trim());
+        formData.append('message', messageInput.value.trim());
+        formData.append('subject', `New Portfolio Contact Message from ${nameInput.value.trim()}`);
+        formData.append('from_name', nameInput.value.trim());
+
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            name: nameInput.value.trim(),
-            email: emailInput.value.trim(),
-            message: messageInput.value.trim(),
-            subject: `New Portfolio Contact Message from ${nameInput.value.trim()}`
-          })
+          body: formData
         });
 
         const result = await response.json();
 
         if (result.success) {
-          showFormStatus('Thank you! Your message has been sent to Sohail successfully.', 'success');
+          showFormStatus('Thank you! Your message has been sent successfully. Please check your Gmail (including Spam folder).', 'success');
           contactForm.reset();
         } else {
-          showFormStatus(result.message || 'Error sending message. Please try again.', 'error');
+          showFormStatus(`Web3Forms: ${result.message || 'Error sending message.'}`, 'error');
         }
       } catch (err) {
-        showFormStatus('Network error occurred. Please try again or email directly.', 'error');
+        showFormStatus('Network error occurred. Please check your connection or email directly.', 'error');
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
@@ -190,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       formStatus.style.display = 'none';
       formStatus.className = 'form-status';
-    }, 6000);
+    }, 8000);
   }
 
 });
