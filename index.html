@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ==========================================================================
+       SEO & OPEN GRAPH META TAGS
+       ========================================================================== -->
+  <!-- REPLACE: Update your name & title in Meta Title and Description -->
+  <title>Sohail Shahzad | Full-Stack Web & App Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Sohail Shahzad - Full-Stack Web & App Developer based in Sargodha, Pakistan. Specializing in WordPress, Laravel, Shopify Theme Dev, Flutter, Node.js, MERN Stack, and Next.js.">
+  <meta name="keywords" content="Full-Stack Developer, Web Developer, App Developer, WordPress, Laravel, Shopify, Liquid, Flutter, Node.js, MERN Stack, Next.js, Sargodha Pakistan, Freelancer">
+  <meta name="author" content="Sohail Shahzad">
+
+  <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+  <meta property="og:type" content="website">
+  <!-- REPLACE: Update with your deployed GitHub Pages URL -->
+  <meta property="og:url" content="https://sohailshahzad0.github.io/">
+  <meta property="og:title" content="Sohail Shahzad - Full-Stack Web & App Developer">
+  <meta property="og:description" content="Custom web applications, Shopify theme development, mobile apps with Flutter, and high-performance MERN/Laravel solutions.">
+  <!-- REPLACE: Update with your preview banner image URL -->
+  <meta property="og:image" content="https://sohailshahzad0.github.io/favicon.svg">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sohail Shahzad - Full-Stack Web & App Developer">
+  <meta name="twitter:description" content="Building scalable web platforms & mobile applications using MERN, Flutter, Laravel, Shopify, and WordPress.">
+  <meta name="twitter:image" content="https://sohailshahzad0.github.io/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts (Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       STICKY NAVBAR
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <!-- REPLACE: Your Brand / Name Initials -->
+        <span>Sohail<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark / Light Theme Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <!-- Mobile Navigation Drawer Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         1. HERO SECTION
+         ======================================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="hero-greeting">
+            <i class="fa-solid fa-hand-sparkles"></i> Hello &amp; Welcome!
+          </div>
+          <!-- REPLACE: Your Name -->
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Sohail Shahzad</span>
+          </h1>
+          <!-- REPLACE: Your Title -->
+          <div class="hero-subtitle">Full-Stack Web &amp; App Developer</div>
+          <!-- REPLACE: Your Short Tagline -->
+          <p class="hero-tagline">
+            I craft high-performance web applications, custom Shopify themes, and cross-platform mobile apps. Turning complex ideas into elegant digital experiences.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-tech-stack">
+            <span class="hero-tech-label">Primary Stack:</span>
+            <div class="hero-tech-icons">
+              <i class="fa-brands fa-wordpress" title="WordPress"></i>
+              <i class="fa-brands fa-laravel" title="Laravel"></i>
+              <i class="fa-brands fa-shopify" title="Shopify / Liquid"></i>
+              <i class="fa-brands fa-react" title="MERN & React"></i>
+              <i class="fa-brands fa-node-js" title="Node.js"></i>
+              <i class="fa-solid fa-mobile-screen-button" title="Flutter"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card">
+            <div class="avatar-img-wrapper">
+              <!-- REPLACE: Update src with your profile photo URL if available -->
+              <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e1b4b" />
+                    <stop offset="100%" stop-color="#0f172a" />
+                  </linearGradient>
+                  <linearGradient id="avatar-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6366f1" />
+                    <stop offset="100%" stop-color="#38bdf8" />
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="400" fill="url(#avatar-bg)"/>
+                <circle cx="200" cy="150" r="70" fill="url(#avatar-accent)" opacity="0.9"/>
+                <path d="M 80 340 C 80 230, 320 230, 320 340 Z" fill="url(#avatar-accent)" opacity="0.7"/>
+                <text x="200" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle" opacity="0.8">&lt;Full-Stack Engineer /&gt;</text>
+              </svg>
+            </div>
+
+            <div class="avatar-badge-floating">
+              <div class="status-dot"></div>
+              <div>
+                <div class="badge-text-title">Available for Projects</div>
+                <div class="badge-text-subtitle">Freelance &amp; Agency Work</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         2. ABOUT SECTION
+         ======================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-user"></i> About Me</span>
+          <h2 class="section-title">Driven by Quality &amp; Clean Architecture</h2>
+          <p class="section-description">Delivering end-to-end digital solutions for businesses worldwide.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <!-- REPLACE: Update with your preferred bio details -->
+            <div class="about-location">
+              <i class="fa-solid fa-location-dot"></i> Based in Sargodha, Pakistan
+            </div>
+            
+            <p class="about-bio">
+              I am a passionate Full-Stack Web &amp; Mobile App Developer with extensive experience building scalable web solutions, custom e-commerce engines, and cross-platform mobile apps. I collaborate with clients, startups, and agencies worldwide to build robust, modern digital products.
+            </p>
+            <p class="about-bio">
+              Whether architecting a MERN Stack web app, tailoring custom Liquid blocks for Shopify stores, engineering Laravel backends, or crafting mobile apps with Flutter, I focus on performance, clean code, and exceptional user experience.
+            </p>
+
+            <a href="#contact" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-handshake"></i> Let's Work Together
+            </a>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <!-- REPLACE: Your experience stats -->
+              <div class="stat-number gradient-text">5+</div>
+              <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number gradient-text">50+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number gradient-text">7+</div>
+              <div class="stat-label">Core Technologies</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number gradient-text">100%</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. SKILLS SECTION
+         ======================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-layer-group"></i> My Skills</span>
+          <h2 class="section-title">Core Technologies &amp; Frameworks</h2>
+          <p class="section-description">A comprehensive toolkit spanning web design, enterprise backends, e-commerce, and mobile platforms.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- WordPress -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrapper">
+                <i class="fa-brands fa-wordpress"></i>
+              </div>
+              <h3 class="skill-title">WordPress</h3>
+            </div>
+            <p class="skill-description">Custom theme development, plugin creation, ACF integration, performance optimization, and headless WordPress setups.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Custom Themes</span>
+              <span class="skill-tag">WooCommerce</span>
+              <span class="skill-tag">ACF Pro</span>
+            </div>
+          </div>
+
+          <!-- Laravel -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrapper">
+                <i class="fa-brands fa-laravel"></i>
+              </div>
+              <h3 class="skill-title">Laravel</h3>
+            </div>
+            <p class="skill-description">Robust RESTful APIs, multi-tenant SaaS architectures, Eloquent ORM, authentication systems, and database optimization.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Blade</span>
+              <span class="skill-tag">Inertia.js</span>
+            </div>
+          </div>
+
+          <!-- Shopify -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrapper">
+                <i class="fa-brands fa-shopify"></i>
+              </div>
+              <h3 class="skill-title">Shopify</h3>
+            </div>
+            <p class="skill-description">Theme Development 2.0, Liquid template coding, custom JSON blocks, App integrations, and conversion rate optimization.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Theme Dev 2.0</span>
+              <span class="skill-tag">Liquid</span>
+              <span class="skill-tag">Custom Blocks</span>
+              <span class="skill-tag">Storefront API</span>
+            </div>
+          </div>
+
+          <!-- Flutter -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrapper">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <h3 class="skill-title">Flutter</h3>
+            </div>
+            <p class="skill-description">Cross-platform native mobile app development for iOS &amp; Android, state management (Provider/Bloc), and custom UI components.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Dart</span>
+              <span class="skill-tag">iOS &amp; Android</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">State Mgmt</span>
+            </div>
+          </div>
+
+          <!-- Node.js -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrapper">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
+              <h3 class="skill-title">Node.js</h3>
+            </div>
+            <p class="skill-description">High-concurrency backend services, Express microservices, JWT authentication, web sockets, and database design.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">WebSockets</span>
+              <span class="skill-tag">JWT</span>
+            </div>
+          </div>
+
+          <!-- MERN Stack -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrapper">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <h3 class="skill-title">MERN Stack</h3>
+            </div>
+            <p class="skill-description">Full-stack web applications using MongoDB, Express, React, and Node.js for scalable enterprise solutions.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Node.js</span>
+            </div>
+          </div>
+
+          <!-- Next.js -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrapper">
+                <i class="fa-solid fa-n"></i>
+              </div>
+              <h3 class="skill-title">Next.js</h3>
+            </div>
+            <p class="skill-description">Production-ready React framework featuring Server-Side Rendering (SSR), Static Site Generation (SSG), and App Router.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">SSR / SSG</span>
+              <span class="skill-tag">App Router</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. PROJECTS SECTION
+         ======================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-briefcase"></i> My Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">A selection of recent web applications, Shopify stores, and mobile apps engineered with precision.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: E-Commerce Store -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <span class="project-category-badge">Shopify</span>
+              <!-- REPLACE: Replace SVG below with your project screenshot <img> tag e.g. <img src="assets/project1.jpg" alt="Shopify Theme"> -->
+              <svg width="100%" height="100%" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#0f172a"/>
+                <rect x="30" y="30" width="340" height="180" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                <circle cx="60" cy="55" r="5" fill="#ef4444"/><circle cx="75" cy="55" r="5" fill="#f59e0b"/><circle cx="90" cy="55" r="5" fill="#10b981"/>
+                <rect x="40" y="80" width="140" height="110" rx="6" fill="#334155"/>
+                <rect x="200" y="80" width="160" height="16" rx="4" fill="#9699f1"/>
+                <rect x="200" y="105" width="120" height="12" rx="4" fill="#475569"/>
+                <rect x="200" y="145" width="80" height="30" rx="6" fill="#38bdf8"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <!-- REPLACE: Project Title -->
+              <h3 class="project-title">Custom Shopify E-Commerce Store</h3>
+              <!-- REPLACE: Project Description -->
+              <p class="project-description">
+                Bespoke Shopify Theme 2.0 with custom Liquid sections, interactive product configurator, and dynamic cart drawer for an international apparel brand.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">Shopify</span>
+                <span class="tech-badge">Liquid</span>
+                <span class="tech-badge">Custom Blocks</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <!-- REPLACE: Update Live Demo & GitHub links -->
+                <a href="https://example.com" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/sohailshahzad0" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Telemedicine App -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <span class="project-category-badge">Flutter</span>
+              <svg width="100%" height="100%" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#0f172a"/>
+                <rect x="130" y="20" width="140" height="200" rx="16" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+                <rect x="170" y="30" width="60" height="8" rx="4" fill="#334155"/>
+                <circle cx="200" cy="100" r="30" fill="#6366f1" opacity="0.3"/>
+                <path d="M190 100 H210 M200 90 V110" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+                <rect x="150" y="150" width="100" height="12" rx="4" fill="#475569"/>
+                <rect x="160" y="170" width="80" height="24" rx="12" fill="#10b981"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Healthcare Telemedicine App</h3>
+              <p class="project-description">
+                Cross-platform Flutter mobile application featuring real-time appointment booking, video consultations, and digital prescription downloads.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Dart</span>
+                <span class="tech-badge">Firebase</span>
+                <span class="tech-badge">REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://example.com" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+                </a>
+                <a href="https://github.com/sohailshahzad0" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: SaaS Dashboard -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <span class="project-category-badge">Laravel</span>
+              <svg width="100%" height="100%" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#0f172a"/>
+                <rect x="30" y="30" width="340" height="180" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                <rect x="40" y="45" width="70" height="150" rx="4" fill="#0f172a"/>
+                <rect x="120" y="45" width="240" height="70" rx="4" fill="#334155"/>
+                <path d="M140 100 L180 70 L220 85 L270 55 L320 80" stroke="#10b981" stroke-width="3" fill="none"/>
+                <rect x="120" y="125" width="110" height="70" rx="4" fill="#334155"/>
+                <rect x="250" y="125" width="110" height="70" rx="4" fill="#334155"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Multi-Tenant SaaS Platform</h3>
+              <p class="project-description">
+                Enterprise SaaS management portal with tenant isolation, role-based access control, automated billing integration, and analytical reporting.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">Laravel</span>
+                <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">Stripe</span>
+              </div>
+              <div class="project-links">
+                <a href="https://example.com" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/sohailshahzad0" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Digital Marketplace (MERN) -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <span class="project-category-badge">MERN Stack</span>
+              <svg width="100%" height="100%" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#0f172a"/>
+                <rect x="40" y="40" width="100" height="150" rx="8" fill="#1e293b"/>
+                <rect x="150" y="40" width="100" height="150" rx="8" fill="#1e293b"/>
+                <rect x="260" y="40" width="100" height="150" rx="8" fill="#1e293b"/>
+                <circle cx="90" cy="80" r="25" fill="#6366f1"/>
+                <circle cx="200" cy="80" r="25" fill="#38bdf8"/>
+                <circle cx="310" cy="80" r="25" fill="#10b981"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Digital Asset Marketplace</h3>
+              <p class="project-description">
+                Full-stack MERN application for buying and selling digital products, featuring JWT authentication, stateful cart, and instant download delivery.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="https://example.com" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/sohailshahzad0" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: Headless Next.js Blog/CMS -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <span class="project-category-badge">Next.js</span>
+              <svg width="100%" height="100%" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#0f172a"/>
+                <rect x="50" y="40" width="300" height="160" rx="8" fill="#1e293b"/>
+                <rect x="70" y="60" width="160" height="18" rx="4" fill="#ffffff"/>
+                <rect x="70" y="90" width="260" height="10" rx="3" fill="#475569"/>
+                <rect x="70" y="110" width="240" height="10" rx="3" fill="#475569"/>
+                <rect x="70" y="130" width="200" height="10" rx="3" fill="#475569"/>
+                <rect x="70" y="155" width="90" height="25" rx="6" fill="#6366f1"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Headless Next.js Web Platform</h3>
+              <p class="project-description">
+                Ultra-fast static generated portal powered by Next.js App Router, GraphQL queries, and server-side rendering for optimal search engine performance.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">GraphQL</span>
+                <span class="tech-badge">Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="https://example.com" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/sohailshahzad0" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: WordPress Agency Site -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <span class="project-category-badge">WordPress</span>
+              <svg width="100%" height="100%" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#0f172a"/>
+                <rect x="30" y="30" width="340" height="180" rx="8" fill="#1e293b"/>
+                <circle cx="200" cy="100" r="35" fill="#21759b"/>
+                <path d="M185 85 L200 120 L215 85" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="120" y="150" width="160" height="14" rx="4" fill="#475569"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Corporate Agency Web Portal</h3>
+              <p class="project-description">
+                Custom WordPress theme engineered from scratch without bloated page builders. Includes custom post types, Gutenberg blocks, and PageSpeed optimization.
+              </p>
+              <div class="project-tech">
+                <span class="tech-badge">WordPress</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">Gutenberg</span>
+                <span class="tech-badge">SEO</span>
+              </div>
+              <div class="project-links">
+                <a href="https://example.com" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/sohailshahzad0" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. SERVICES SECTION
+         ======================================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-gears"></i> What I Offer</span>
+          <h2 class="section-title">Professional Services</h2>
+          <p class="section-description">End-to-end development services to elevate your online business presence.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="service-title">Website Development</h3>
+            <p class="service-text">
+              Custom WordPress websites, responsive landing pages, and web portals built with clean code and high page speed scores.
+            </p>
+            <div class="service-list">
+              <div class="service-item"><i class="fa-solid fa-check"></i> WordPress Custom Themes</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> Advanced Custom Fields (ACF)</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> SEO &amp; Performance Audit</div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-brands fa-shopify"></i>
+            </div>
+            <h3 class="service-title">Shopify Stores</h3>
+            <p class="service-text">
+              Turnkey Shopify 2.0 setup, custom Liquid theme building, JSON schema blocks, app integrations, and conversion tweaks.
+            </p>
+            <div class="service-list">
+              <div class="service-item"><i class="fa-solid fa-check"></i> Theme 2.0 Customization</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> Custom Liquid Sections</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> Storefront Migration</div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <h3 class="service-title">Mobile Apps (Flutter)</h3>
+            <p class="service-text">
+              Cross-platform mobile applications for iOS and Android compiled from a single, high-performance Flutter codebase.
+            </p>
+            <div class="service-list">
+              <div class="service-item"><i class="fa-solid fa-check"></i> iOS &amp; Android Apps</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> Firebase &amp; REST Integration</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> Smooth Native UI Animations</div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-cubes"></i>
+            </div>
+            <h3 class="service-title">Custom Web Apps</h3>
+            <p class="service-text">
+              Complex web applications, SaaS platforms, and admin dashboards constructed with MERN Stack, Next.js, or Laravel.
+            </p>
+            <div class="service-list">
+              <div class="service-item"><i class="fa-solid fa-check"></i> MERN &amp; Next.js Platforms</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> Laravel Backend APIs</div>
+              <div class="service-item"><i class="fa-solid fa-check"></i> Database Design &amp; Security</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. CONTACT SECTION
+         ======================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-envelope"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Discuss Your Next Project</h2>
+          <p class="section-description">Have an upcoming project or inquiry? Send a message and let me help you build something great.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3 class="contact-info-title">Contact Information</h3>
+            <p class="contact-info-desc">
+              Feel free to reach out via the contact form or directly through email, GitHub, or WhatsApp.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="method-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <div class="method-label">Email</div>
+                  <!-- REPLACE: Update with your primary email address -->
+                  <a href="mailto:sohailshahzad.dev@gmail.com" class="method-value">sohailshahzad.dev@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <div class="method-label">Location</div>
+                  <div class="method-value">Sargodha, Punjab, Pakistan</div>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <div class="method-label">WhatsApp</div>
+                  <div class="method-value">+92 300 0000000</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <!-- REPLACE: Update your social profile links -->
+              <a href="https://github.com/sohailshahzad0" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/sohailshahzad0" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:sohailshahzad.dev@gmail.com" class="social-btn" aria-label="Email Me">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Project Details / Message</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project scope, timeline, and requirements..." required></textarea>
+            </div>
+
+            <div id="form-status" class="form-status"></div>
+
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       REQUIREMENT: FIXED FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT)
+       - Opens https://wa.me/[YOUR_PHONE_NUMBER]?text=Hi,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project
+       - Official WhatsApp icon
+       - Subtle pulse/bounce animation
+       - Tooltip "Chat with me on WhatsApp" on hover
+       ========================================================================== -->
+  <div class="whatsapp-float-container">
+    <div class="whatsapp-tooltip">Chat with me on WhatsApp</div>
+    <!-- REPLACE: Set data-phone attribute to your real phone number with country code e.g. 923001234567 -->
+    <a 
+      href="https://wa.me/923000000000?text=Hi,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project" 
+      target="_blank" 
+      rel="noopener" 
+      id="whatsapp-link" 
+      class="whatsapp-float-btn" 
+      data-phone="923000000000"
+      aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <!-- REPLACE: Footer Name / Brand -->
+      <div class="footer-brand">
+        Sohail<span class="gradient-text">.dev</span>
+      </div>
+      <p class="footer-copyright">
+        &copy; <span id="current-year">2026</span> Sohail Shahzad. Built with HTML, CSS &amp; JavaScript. Deployable on GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
